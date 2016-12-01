@@ -13,6 +13,7 @@ function liquid_scripts_styles() {
     wp_enqueue_style( 'liquid-style', get_stylesheet_uri(), array() );
     wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ) );
     wp_enqueue_script( 'liquid-script', get_template_directory_uri() . '/js/common.min.js', array( 'jquery' ) );
+    wp_enqueue_script( 'slider', get_template_directory_uri() . '/js/slider.js', array( 'jquery' ) );
     if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
 }
 add_action( 'wp_enqueue_scripts', 'liquid_scripts_styles' );
@@ -77,7 +78,7 @@ function liquid_widgets_init() {
 add_filter('body_class', 'liquid_class_names');
 function liquid_class_names($classes) {
     if (is_single()){
-        $cat = get_the_category(); 
+        $cat = get_the_category();
         $parent_cat_id = $cat[0]->parent;
         if(!$parent_cat_id){ $parent_cat_id = $cat[0]->cat_ID; }
         $classes[] = "category_".$parent_cat_id;

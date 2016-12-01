@@ -10,10 +10,10 @@
 <body <?php body_class(); ?>>
 
  <div class="wrapper" id="top">
-   
+
     <div class="headline">
      <div class="container">
-     
+
       <div class="row">
        <div class="col-sm-6">
         <a href="<?php echo esc_url( home_url() ); ?>" title="<?php bloginfo('name'); ?>" class="logo">
@@ -32,7 +32,7 @@
       </div>
      </div>
     </div>
-      
+
     <nav class="navbar navbar-light bg-faded">
      <div class="container">
         <!-- Global Menu -->
@@ -52,8 +52,19 @@
       </button>
      </div>
     </nav>
-    
+
     <?php if( get_header_image() && is_home() ): ?>
+     <div class="slider">
+      <ul class="slideSet">
+       <li class="slide">slide1</li>
+       <li class="slide">slide2</li>
+       <li class="slide">slide3</li>
+       <li class="slide">slide4</li>
+       <li class="slide">slide5</li>
+      </ul>
+     </div>
+     <button class="btn btn-danger slider-prev">前へ</button>
+     <button class="btn btn-success slider-next">次へ</button>
+
      <img src="<?php header_image(); ?>" alt="<?php bloginfo('name'); ?>" class="header_image">
     <?php endif; ?>
-  
