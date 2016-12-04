@@ -995,26 +995,3 @@ footer {
         text-align: left;
     }
 }
-
-/*
-  slider
-*/
-.slider {
-  width: 400px;
-  height: 200px;
-  overflow: hidden;
-  position: relative;
-}
-
-.slider .slide {
-  width: 398px;
-  height: 198px;
-  border: 1px solid #f00;
-  float: left;
-  list-style: none;
-}
-
-.slider .slideSet{
- padding-left: 0px;
- position: absolute;
-}
